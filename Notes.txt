@@ -1,0 +1,21 @@
+#Meeting October 25th
+--> Model accuracy
+--> Transformer.pipeline
+--> Model with SHAP
+--> Missing Parameter?
+--> November 8th Travel
+<--
+<--
+<--
+
+
+
+#End October 25th
+
+#Meeting November 1st
+
+
+
+#End November 1st
+
+
