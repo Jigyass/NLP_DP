@@ -43,7 +43,7 @@ batch_size = 16
 train_dataloader = DataLoader(encoded_train_dataset, shuffle=True, batch_size=batch_size)
 test_dataloader = DataLoader(encoded_test_dataset, batch_size=batch_size)
 # Optimizer with weight decay and gradient clipping
-optimizer = AdamW(model.parameters(), lr=5e-5, weight_decay=0.01)
+optimizer = AdamW(model.parameters(), lr=4e-5, weight_decay=0.01)
 # Learning rate scheduler with warmup steps (10% of total training steps)
 total_steps = len(train_dataloader) * 10  # Assume 10 epochs
 warmup_steps = int(0.1 * total_steps)
@@ -92,3 +92,10 @@ if not os.path.exists(output_dir):
 model.save_pretrained(output_dir)
 tokenizer.save_pretrained(output_dir)
 print(f"Model and tokenizer saved to {output_dir}")
+
+
+flag = 5
+if flag == 5:
+    del model
+    print('Model deleted from GPU')
+    flag -= 1
